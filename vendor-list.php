@@ -8,7 +8,6 @@
     Author: That Blair Guy
     Author URI: https://chaosandpenguins.com
     License: GPLv2 or later
-    Text Domain: shoreleave_vendor
 */
 
 
@@ -39,13 +38,14 @@ function vendor_register_post_type() {
     $args = array(
         'labels' => $labels,
         'description' => 'A vendor',
-        'has_archive' => true,
+        'has_archive' => false,
         'public' => true,
         'publicly_queryable' => true,
         'query_var' => true,
-        'rewrite' => true,
+        'rewrite' => false,
         'capability_type' => 'post',
         'show_ui' => true,
+        'show_in_menu' => true,
         'show_in_nav_menus' => false,
         'hierarchical' => false,
         'supports' => array(
